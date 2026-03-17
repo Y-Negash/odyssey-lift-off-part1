@@ -16,5 +16,10 @@
   },
   "author": "Raphael Terrier @R4ph-t",
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "@apollo/server": "^5.4.0",
+    "graphql": "^16.13.1",
+    "graphql-tag": "^2.12.6"
+  }
 }
