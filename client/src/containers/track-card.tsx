@@ -2,13 +2,19 @@ import React from "react";
 import styled from "@emotion/styled";
 import { colors, mq } from "../styles";
 import { humanReadableTimeFromSeconds } from "../utils/helpers";
+import { Track, Author } from "../__generated__/types";
 
 /**
  * Track Card component renders basic info in a card format
  * for each track populating the tracks grid homepage.
  */
-const TrackCard: React.FC<{ track: any }> = ({ track }) => {
-  const { title, thumbnail, author, length, modulesCount } = track;
+
+interface TrackCardProps {
+  track: Track;
+}
+const TrackCard: React.FC<TrackCardProps> = ({
+  track: { title, thumbnail, author, length, modulesCount },
+}: TrackCardProps) => {
 
   return (
     <CardContainer>
