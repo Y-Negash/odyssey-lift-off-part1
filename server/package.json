@@ -4,11 +4,17 @@
   "description": "back-end demo app for Apollo's lift-off course",
   "main": "src/index.js",
   "scripts": {
-    "compile": "tsc",
+    "compile": "tsc && cp src/schema.graphql dist/",
     "dev": "ts-node-dev --respawn ./src/index.ts",
     "start": "npm run compile && nodemon ./dist/index.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@apollo/server": "^5.5.2",
+    "@graphql-tools/mock": "^8.6.1",
+    "@graphql-tools/schema": "^8.3.3",
+    "graphql": "^16.15.0",
+    "graphql-tag": "^2.12.7"
+  },
   "devDependencies": {
     "dotenv": "^16.4.0",
     "nodemon": "^3.1.0",
